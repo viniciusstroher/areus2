@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Areus</title>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+		<link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.css"/>
+
+		<style>
+		    .purple1{
+		    	background-color:#6868FE;
+		    }
+			.darkest-purple{
+				background-color:#1C1C5A;
+			}
+
+			.transparent{
+				background-color: transparent !important;
+			}
+
+			.desktop-bghome{
+				background: url('img/home areus.jpg');
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+			.heigh-top-banner{
+				height: 110px;
+			}
+
+			.monitor-height{
+				height: 100vh;
+			}
+
+			
+			.nav-link{
+				color: white !important;
+				font-size: 20px !important;
+			}
+
+			.navbar-nav{
+				width: 100%;
+			    display: flex;
+			    justify-content: space-evenly;
+			}
+
+			.btn-tranparent{
+				background-color: transparent;
+				border-radius: 50px;
+				color:white;
+				border: 1px solid white;
+				padding: 10px;
+				
+			}
+
+			.btn-amarelo{
+				background-color: #F8DC49 ;
+				border-radius: 50px;
+				color:black;
+				border: 1px solid white;
+				padding: 10px;
+			}
+
+			.box-1{
+				width: 50%;
+				text-align: left;
+			}
+			
+
+			.title-small{
+				color: white;
+				font-size: 30px;
+				font-weight: 600;
+			}
+
+			.title-big{
+				color: white;
+				font-size: 50px;
+				font-weight: 800;
+			}
+
+			.title-thin-small{
+				color: white;
+				font-size: 30px;
+			}
+
+
+			.title-grey-bold{
+				color:#666666;
+				font-size: 40px;
+				font-weight: bold;
+			}
+
+			.beneficios-tipos{
+				border-radius: 50px;
+				background-color:#6868FE;
+				height: 70px;
+				text-align: center;
+				color:white;
+				font-size: 30px; 
+				line-height: 2;
+			}
+
+			.beneficio{
+				height: 180px;
+			}
+			.beneficio img{
+				width: 60px;
+				height: 60px;
+			}
+			.beneficio div:nth-child(1){
+				color:#6868FE;
+				font-size: 20px;
+				font-weight: 600;
+			}
+
+			.link-beneficios-conheca{
+				color:#0074FF;
+				font-size: 18px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light transparent position-absolute w-100 pt-3">
+		  <div class="col-xl-6 heigh-top-banner" align="center">
+		  	 <a class="navbar-brand" href="#">
+		  	 	<img width="96" height="96" src="img/logo_small.svg"/>
+		  	 </a>
+		  </div>
+		 
+		  <!-- MOBILE -->
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <!-- pc -->
+		  <div class="col-xl-6 heigh-top-banner">
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav mr-auto ">
+			      <li class="nav-item active">
+			        <a class="nav-link" href="#">Pagementos <span class="sr-only">(current)</span></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#">Cashback</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#">Ecosistema</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#">Token</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#">ICO</a>
+			      </li>
+			    </ul>
+			    
+			  </div>
+			 
+		  </div>
+		</nav>
+
+
+
+		<!-- tela 1 banner -->
+		<div class="container-fluid desktop-bghome monitor-height">
+		  <div class="h-50"></div>
+		  <div class="row d-flex">
+		    
+		    <div align="center" class="col p-2">
+		      <div class="box-1">
+		      	 <div class="title-small">Uma nova forma de</div>
+		     	 <div class="title-big">Pagar, receber e ganhar dinheiro</div>
+		     	 <div><button class="btn-amarelo m-2" style="width:200px">Lista de espera</button></div>
+		      </div>
+		    </div>
+		    
+		    <div align="center" class="col p-2">
+		      <div class="box-1">
+		      	<div class="title-right-top m-2">Faça parte da ICO</div>
+		      	<div>
+		      		<div class="m-2" align="center">CONTADOR</div>
+		      		<div class="d-flex flex-column">
+		      			<div class="d-flex flex-column m-2">
+		      				<button class="btn-amarelo m-2">Comprar</button>
+		      				<button class="btn-tranparent m-2">Acesso o ICO</button>
+		      			</div>
+		      			<div class="d-flex flex-row m-2">
+		      				<button class="btn-tranparent m-2 w-50">Conheça a ICO</button>
+		      				<button class="btn-tranparent m-2 w-50">Baixe o Whitepaper</button>
+		      			</div>
+		      		</div>
+		      	</div>
+		      </div>
+		      
+		    </div>
+		    
+		  </div>
+		</div>
+		<!-- 1 tela banner -->
+
+
+
+
+
+
+		<!-- 2 TELA pagamentos -->
+		<div class="container-fluid ">
+		  <div style="height: 250px;"></div>
+		  <div class="row d-flex purple1">
+		    
+		    <div align="right" class="col p-2" >
+		      <div class="box-1" style="width: 75%;">
+		      	 <div class="title-thin-small">Pagamentos</div>
+		     	 <div class="title-big">Pagar e receber com muito mais facilidade e transparência</div>
+		     	 <div class="title-thin-small" style="color:#979090;">Somos um ecosistema de pagamentos que mudará sua relação com o dinheiro</div>
+		      </div>
+		    </div>
+		    
+		    <div align="center" class="col p-2">
+		      <div class="box-1">
+		      	<div class="title-right-top m-2">IMG</div>
+		      	<div>
+		      		
+		      	</div>
+		      </div>
+		      
+		    </div>
+		    
+		  </div>
+		</div>
+		<!-- 2 TELA pagamentos -->
+
+
+		<!-- tela 3 - beneficios -->
+		<div class="container-fluid " >
+		  <div style="height: 150px;"></div>
+		  <div align="center" class="col title-grey-bold">Benefícios de usar Areus</div>
+		  <div style="height: 100px;"></div>
+		  <div class="row d-flex ">
+		    
+		    <div align="center" class="col p-2">
+		      <div class="box-1">
+		      	 <div class="beneficios-tipos">para o consumidor</div>
+		      	 
+		      	 <div class="beneficio d-flex flex-row mt-2">
+		      	 	<div class="p-2 mr-2">
+		      	 		<img src=""/>
+		      	 	</div>
+		      	 	<div class="d-flex flex-column">
+		      	 		<div>Sem mensalidade ou anuidade</div>
+		      	 		<div>Baixe o app e crie um conta 100% free! Não temos mensalidades, anuidade ou outras taxas escondidas.</div>
+		      	 	</div>
+		      	 </div>
+
+		      	 <div class="beneficio d-flex flex-row mt-2">
+		      	 	<div class="p-2 mr-2">
+		      	 		<img src=""/>
+		      	 	</div>
+		      	 	<div class="d-flex flex-column">
+		      	 		<div>Ganhe dinheiro</div>
+		      	 		<div>Compre em suas loja físicas e virtuais preferidas e receba parte do balor pago de volta.</div>
+		      	 	</div>
+		      	 </div>
+		     
+
+		     	 <div class="beneficio d-flex flex-row mt-2">
+		      	 	<div class="p-2 mr-2">
+		      	 		<img src=""/>
+		      	 	</div>
+		      	 	<div class="d-flex flex-column">
+		      	 		<div>Faça pagamentos e transferências</div>
+		      	 		<div>Faça pagamentos em lojas físicas e virtuais, além de transferir seu dinheiro para amigos e outras contas.</div>
+		      	 	</div>
+		      	 </div>
+		     	
+		     	<div class="beneficio d-flex flex-row mt-2">
+		      	 	<div class="p-2 mr-2">
+		      	 		<img src=""/>
+		      	 	</div>
+		      	 	<div class="d-flex flex-column">
+		      	 		<div>Tenha uma carteira digital</div>
+		      	 		<div>Guarde seu dinheiro em sua carteira! Diferente de instituições financeiras, nós não temos nenhum tipo de acesso ou controle do que está em sua carteira.</div>
+		      	 	</div>
+		      	 </div>
+		     	 <div class="link-beneficios-conheca mt-2 mb-5">Conheça todos o benefícios para consumidor</div>
+		     
+		      </div>
+		    </div>
+		    
+		    <div align="center" class="col p-2">
+		      <div class="box-1">
+		      	<div class="beneficios-tipos">para o lojista</div>
+		      	<div class="beneficio d-flex flex-row mt-2">
+		      	 	<div class="p-2 mr-2">
+		      	 		<img src=""/>
+		      	 	</div>
+		      	 	<div class="d-flex flex-column">
+		      	 		<div>Menores taxas no mercado</div>
+		      	 		<div>Torne seu negócio mais lucrativo eliminando taxas desnecessárias.</div>
+		      	 	</div>
+		      	 </div>
+
+		      	 <div class="beneficio d-flex flex-row mt-2">
+		      	 	<div class="p-2 mr-2">
+		      	 		<img src=""/>
+		      	 	</div>
+		      	 	<div class="d-flex flex-column">
+		      	 		<div>Sem vínculo com sistema de cartões</div>
+		      	 		<div>Receba pagamentos sem precisar de acessórios extras. Utilize apenas um smartphone, tablet ou computador.</div>
+		      	 	</div>
+		      	 </div>
+		     
+
+		     	 <div class="beneficio d-flex flex-row mt-2">
+		      	 	<div class="p-2 mr-2">
+		      	 		<img src=""/>
+		      	 	</div>
+		      	 	<div class="d-flex flex-column">
+		      	 		<div>Fidelize e atraia mais clientes</div>
+		      	 		<div>Seja um estabelecimento que recebe pagamentos com Areus, e fique á frente da concorrência.</div>
+		      	 	</div>
+		      	 </div>
+		     	
+		     	<div class="beneficio d-flex flex-row mt-2">
+		      	 	<div class="p-2 mr-2">
+		      	 		<img src=""/>
+		      	 	</div>
+		      	 	<div class="d-flex flex-column">
+		      	 		<div>Business inteligence</div>
+		      	 		<div>Tenha acesso a dados importantes sobre hábitos de consumo de seus clientes e crie estratégias lucrativas para seu negócio.</div>
+		      	 	</div>
+		      	 </div>
+		      </div>
+		       <div class="link-beneficios-conheca mt-2 mb-5">Conheça todos o benefícios para lojista</div>
+		    </div>
+		    
+		  </div>
+		</div>
+		<!-- tela 3 - beneficios -->
+
+
+		<!-- 4 TELA cashback -->
+		<div class="container-fluid ">
+		  <div style="height: 100px;"></div>
+		  <div class="row d-flex purple1">
+		    
+		    <div align="right" class="col p-2" >
+		      <div class="box-1" style="width: 75%;">
+		      	 <div class="title-thin-small">Pagamentos</div>
+		     	 <div class="title-big">Pagar e receber com muito mais facilidade e transparência</div>
+		     	 <div class="title-thin-small" style="color:#979090;">Somos um ecosistema de pagamentos que mudará sua relação com o dinheiro</div>
+		      </div>
+		    </div>
+		    
+		    <div align="center" class="col p-2">
+		      <div class="box-1">
+		      	<div class="title-right-top m-2">IMG</div>
+		      	<div>
+		      		
+		      	</div>
+		      </div>
+		      
+		    </div>
+		    
+		  </div>
+		</div>
+		<!-- 4 TELA cashback -->
+
+	</body>
+
+</html>
