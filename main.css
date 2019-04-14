@@ -1,0 +1,65 @@
+/*btn*/
+.btn-round{
+	border-radius: 50px;
+	color:black;
+	border: 1px solid white;
+	padding: 10px;
+}
+/*btn*/
+
+/*font-family*/
+.ff-poppins{
+	font-family: 'Poppins';
+}
+/*font-family*/
+
+/*bg*/
+.bg-amarelo{
+	background-color: #F8DC49 !important;
+}
+.bg-transparent{
+	background-color: transparent !important;
+}
+/*bg*/
+
+/*text*/
+.text-white{
+	color: white !important;
+}
+/*text*/
+
+/*font-size*/
+.fs-30{
+	font-size: 30px;
+}
+.fs-50{
+	font-size: 50px;	
+}
+.fs-60{
+	font-size: 60px;
+}
+/*font-size*/
+
+/*font weight*/
+.fw-600{
+	font-weight: 600;
+}
+.fw-800{
+	font-weight: 800;
+}
+.fw-bold{
+	font-weight: bold;
+}
+/*font weight*/
+
+
+/*tela1*/
+.box-left-nova-forma-pagar{
+	width: 75%;
+	text-align: left;
+}
+
+.box-righ-contador{
+	width: 60%;
+}
+/*tela1
