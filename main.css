@@ -73,12 +73,12 @@
 
 /*tela1*/
 .box-left-nova-forma-pagar{
-	width: 75%;
+	width: 55%;
 	text-align: left;
 }
 
 .box-righ-contador{
-	width: 60%;
+	width: 55%;
 }
 
 /*tela3 beneficio*/
@@ -136,3 +136,7 @@
 	width: 90%
 }
 /*tela6 programa de indicacoes*/
+
+.navbar-brand{
+	    margin-right: 26rem;
+}
