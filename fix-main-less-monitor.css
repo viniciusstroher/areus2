@@ -28,6 +28,18 @@
   	font-size: 16px !important;
   }
 
+  .tela3 .beneficio{
+  	height: 140px;
+  }
+
+  .tela8 .title-big{
+  	    font-size: 26px !important;
+  }
+  
+  .tela9 .w-25{
+  	width: 50% !important;
+  }
+  
   .title-ganhegastando{
   	font-size: 30px !important;
   }
