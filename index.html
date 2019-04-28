@@ -265,7 +265,9 @@
 					
 				});
 
-				$("#navbarSupportedContent > ul > li.nav-item.active > a").click(function(e) {
+
+				//pagamentos
+				$("#navbarSupportedContent > ul > li:nth-child(1) > a").click(function(e) {
 
 					e.preventDefault();
 				    $('html, body').animate({
@@ -273,7 +275,50 @@
 				    }, 100);
 				});
 
+				//cashback
+				$("#navbarSupportedContent > ul > li:nth-child(2) > a").click(function(e) {
 
+					e.preventDefault();
+				    $('html, body').animate({
+				        scrollTop: $(".tela4").offset().top
+				    }, 100);
+				});
+
+				//ecossistema
+				$("#navbarSupportedContent > ul > li:nth-child(3) > a").click(function(e) {
+
+					e.preventDefault();
+				    $('html, body').animate({
+				        scrollTop: $(".tela5").offset().top
+				    }, 100);
+				});
+
+				//token
+				$("#navbarSupportedContent > ul > li:nth-child(4) > a").click(function(e) {
+
+					e.preventDefault();
+				    $('html, body').animate({
+				        scrollTop: $(".tela7").offset().top
+				    }, 100);
+				});
+
+				//ico
+				$("#navbarSupportedContent > ul > li:nth-child(4) > a").click(function(e) {
+
+					e.preventDefault();
+				    $('html, body').animate({
+				        scrollTop: $(".tela8").offset().top
+				    }, 100);
+				});
+
+				//lista de espera
+				$("body > div.container-fluid.desktop-bg.tela1 > div.row.d-flex > div:nth-child(1) > div > div:nth-child(3) > button").click(function(e) {
+
+					e.preventDefault();
+				    $('html, body').animate({
+				        scrollTop: $(".tela9").offset().top
+				    }, 100);
+				});
 			});
 		</script>
 	</head>
