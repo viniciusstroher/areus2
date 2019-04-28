@@ -207,33 +207,27 @@
 		<script>
 			$(document).ready(function(){
 				jQuery.support.cors = true;
-
-
-
 				//FORMULARIO
 				$(".btn-contact").click(function(){
 					
-					// $("#formsucessoenvio").html("");
-					// $("#formnomeerror").html("");
-					// $("#formemailerror").html("");
-					// $("#formemailerror2").html("");
-					// $("#formmsgerror").html("");
+					$("#formsucessoenvio").html("");
+					$("#formnomeerror").html("");
+					$("#formemailerror").html("");
+					$("#formemailerror2").html("");
+					$("#formmsgerror").html("");
 
-					// if($("#formnome").val() == ""){
-					// 	$("#formnomeerror").html(preenchaSeuNome);
-					// }
+					if($("#formnome").val() == ""){
+						$("#formnomeerror").html("Preencha seu nome");
+					}
 
-					// if($("#formemail").val() == ""){
-					// 	$("#formemailerror").html(preenchaSeuEmail);
-					// }
+					if($("#formemail").val() == ""){
+						$("#formemailerror").html("Preencha seu email");
+					}
 
-					// if(!validateEmail($("#formemail").val())){
-					// 	$("#formemailerror2").html(emailEhInvalido);
-					// }
-
-					// if($("#formmsg").val() == ""){
-					// 	$("#formmsgerror").html(preenchaSuaMsg);
-					// }
+					
+					if($("#formmsg").val() == ""){
+						$("#formmsgerror").html(preenchaSuaMsg);
+					}
 
 					if($("[name=nome]").val() != "" && $("[name=email]").val() != "" && $("[name=msg]").val() != ""){
 
