@@ -267,6 +267,56 @@
 					
 				});
 
+				//lista de espera
+				$(".btn-cad").click(function(){
+					
+					$("#formsucessoenviocad").html("");
+					$("#formerrorcad").html("");
+				
+					if($("[name=nome_cad]").val() == ""){
+						$(".formerrorcad").html("Preencha seu nome <br/>");
+						return;
+					}
+
+					if($("[name=email_cad]").val() == ""){
+						$(".formerrorcad").html("Preencha seu email <br/>");
+						return;
+					}
+
+					if($("[name=nome_cad]").val() != "" && $("[name=email_cad]").val() != "" ){
+
+						var form = {
+									    nome:  $("[name=nome_cad]").val() ,
+									    email: $("[name=email_cad]").val(),
+									    msg :  '',
+									    tipo:  "CADASTRO",
+									    lang:  'pt'
+									}
+						$.ajax({ 
+							   type: "POST",
+							   dataType: "json",
+							   data:form,
+							   url: "https://areus.com.br:10443/mensagem-form-site",
+							   success: function(data, textStatus, request){     
+							     console.log(data);
+							     $(".formerrorcad").html("");
+								 
+								 $("[name=nome_cad]").val("");
+								 $("[name=email_cad]").val("");
+								 
+								 
+								 $(".formsucessoenviocad").html("Obrigado por se registrar!");
+							   },
+							   error:function(data, textStatus, request){
+							   	 	
+							   	 $(".formsucessoenviocad").html("O processo de registro falhou.");
+							   }
+							});
+
+					}
+					
+				});
+
 
 				//pagamentos
 				$("#navbarSupportedContent > ul > li:nth-child(1) > a").click(function(e) {
@@ -821,6 +871,11 @@
 		  	</div>
 		  	<div style="margin-top: 40px;">
 		  		<button class="btn-tranparent btn-cad" style="    font-size: 20px;width: 150px;">Cadastre-se</button>
+		  		<div class=" formerrorcad formsucessoenviocad" align="left" style="color:white;height: 100px;margin-left: 10px;
+    text-align: center;">
+					
+
+						</div>
 		  	</div> 
 		  </div>
 		  <div style="height: 100px;"></div>
