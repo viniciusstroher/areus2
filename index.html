@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Areus</title>
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.js" ></script>
 		<script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.js"></script>
 		<link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.css"/>
 		<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
@@ -235,7 +235,7 @@
 					// }
 
 					if($("[name=nome]").val() != "" && $("[name=email]").val() != "" && $("[name=msg]").val() != ""){
-						
+
 						var form = {
 									    nome:  $("[name=nome]").val() ,
 									    email: $("[name=email]").val(),
@@ -261,11 +261,11 @@
 								 $("#formmsg").val("");
 								 $("#formmsgerror").val("");
 
-								 $("#formsucessoenvio").html(msgEnviada);
+								 $("#formsucessoenvio").html("Obrigado pelo contato!");
 							   },
 							   error:function(data, textStatus, request){
 							   	 	
-							   	 $("#formsucessoenvio").html(msgNEnviada);
+							   	 $("#formsucessoenvio").html("Mensagem não enviada.");
 							   }
 							});
 
