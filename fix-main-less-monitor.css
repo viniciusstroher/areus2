@@ -40,7 +40,57 @@
   	width: 50% !important;
   }
   
+  .tela5 .radiusbox-title{
+  	    font-size: 25px;
+  }
+
+  .tela5 .radiusbox-content{
+  	font-size: 18px !important;
+  }
+
+ /* .tela5 > div.row.d-flex.purple1.justify-content-center > div{
+  	width: 100% !important;
+  }*/
+  .tela4 .cashback-box{
+  	margin-top: 20px !important;
+  }
+
+  .tela4 .title-cashback{
+  	margin-bottom: 20px !important;
+  }
+
+  .tela4 .cashback-bg{
+  	left: -100px !important;
+  }
+  
+  .tela4 > div.row.d-flex.bg-gray-soft > div.col.p-2.position-relative > div.white-text.ff-poppins.fs-25.position-absolute.purple-text.fw-bold.text-left{
+  	bottom: -20px !important;
+  }
+
+  .tela4 .beneficio div:nth-child(1){
+  	font-size: 14px !important;
+  }
+
+  .tela4 > div.row.d-flex.bg-gray-soft > div:nth-child(2) > div > div:nth-child(2){
+  	margin-bottom: 20px !important;
+  }
+
+  .tela5 .radiusbox{
+  	width: 300px !important;
+  }
+
+  .tela7 .title-cashback{
+  	margin-top: 20px !important;
+  	margin-bottom: 20px !important;
+  }
+
+  .tela7 .title-ganhegastando{
+  	margin-bottom: 20px !important;
+  }
+
   .title-ganhegastando{
   	font-size: 30px !important;
   }
+
+
 }
