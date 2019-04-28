@@ -205,80 +205,83 @@
 			}
 		</style>
 		<script>
-			// $(document).ready(function(){
-			// 	$("#navbarSupportedContent > ul > li.nav-item.active > a").click(function(e) {
-
-			// 		e.preventDefault();
-			// 	    $('html, body').animate({
-			// 	        scrollTop: $(".tela2").offset().top
-			// 	    }, 100);
-			// 	});
-
-
-			// });
-
-
-			//FORMULARIO
-			$("body > div.container-fluid.purple2.d-flex.flex-row.pt-5 > div.row.d-flex.flex-column.justify-content-center.align-items-center > div:nth-child(4) > button").click(function(){
+			$(document).ready(function(){
 				
-				// $("#formsucessoenvio").html("");
-				// $("#formnomeerror").html("");
-				// $("#formemailerror").html("");
-				// $("#formemailerror2").html("");
-				// $("#formmsgerror").html("");
 
-				// if($("#formnome").val() == ""){
-				// 	$("#formnomeerror").html(preenchaSeuNome);
-				// }
 
-				// if($("#formemail").val() == ""){
-				// 	$("#formemailerror").html(preenchaSeuEmail);
-				// }
+				//FORMULARIO
+				$(".btn-contact").click(function(){
+					
+					// $("#formsucessoenvio").html("");
+					// $("#formnomeerror").html("");
+					// $("#formemailerror").html("");
+					// $("#formemailerror2").html("");
+					// $("#formmsgerror").html("");
 
-				// if(!validateEmail($("#formemail").val())){
-				// 	$("#formemailerror2").html(emailEhInvalido);
-				// }
+					// if($("#formnome").val() == ""){
+					// 	$("#formnomeerror").html(preenchaSeuNome);
+					// }
 
-				// if($("#formmsg").val() == ""){
-				// 	$("#formmsgerror").html(preenchaSuaMsg);
-				// }
+					// if($("#formemail").val() == ""){
+					// 	$("#formemailerror").html(preenchaSeuEmail);
+					// }
 
-				if($("[name=nome]").val() != "" && $("[name=email]").val() != "" && $("[name=msg]").val() != "" && validateEmail($("#formemail").val())){
-					var form = {
-								    nome:  $("[name=nome]").val() ,
-								    email: $("[name=email]").val(),
-								    msg :  $("[name=msg]").val(),
-								    tipo:  "CONTATO",
-								    lang:  'pt'
-								}
-					$.ajax({ 
-						   type: "POST",
-						   dataType: "json",
-						   data:form,
-						   url: "/mensagem-form-site",
-						   success: function(data, textStatus, request){     
-						     console.log(data);
-						     $("#formnomeerror").html("");
-							 $("#formemailerror").html("");
-							 $("#formmsgerror").html("");
+					// if(!validateEmail($("#formemail").val())){
+					// 	$("#formemailerror2").html(emailEhInvalido);
+					// }
 
-							 $("[name=nome]").val("");
-							 $("[name=email]").val("");
-							 $("[name=msg]").val("");
-							 
-							 $("#formmsg").val("");
-							 $("#formmsgerror").val("");
+					// if($("#formmsg").val() == ""){
+					// 	$("#formmsgerror").html(preenchaSuaMsg);
+					// }
 
-							 $("#formsucessoenvio").html(msgEnviada);
-						   },
-						   error:function(data, textStatus, request){
-						   	 	
-						   	 $("#formsucessoenvio").html(msgNEnviada);
-						   }
-						});
+					if($("[name=nome]").val() != "" && $("[name=email]").val() != "" && $("[name=msg]").val() != ""){
+						
+						var form = {
+									    nome:  $("[name=nome]").val() ,
+									    email: $("[name=email]").val(),
+									    msg :  $("[name=msg]").val(),
+									    tipo:  "CONTATO",
+									    lang:  'pt'
+									}
+						$.ajax({ 
+							   type: "POST",
+							   dataType: "json",
+							   data:form,
+							   url: "/mensagem-form-site",
+							   success: function(data, textStatus, request){     
+							     console.log(data);
+							     $("#formnomeerror").html("");
+								 $("#formemailerror").html("");
+								 $("#formmsgerror").html("");
 
-				}
-				
+								 $("[name=nome]").val("");
+								 $("[name=email]").val("");
+								 $("[name=msg]").val("");
+								 
+								 $("#formmsg").val("");
+								 $("#formmsgerror").val("");
+
+								 $("#formsucessoenvio").html(msgEnviada);
+							   },
+							   error:function(data, textStatus, request){
+							   	 	
+							   	 $("#formsucessoenvio").html(msgNEnviada);
+							   }
+							});
+
+					}
+					
+				});
+
+				$("#navbarSupportedContent > ul > li.nav-item.active > a").click(function(e) {
+
+					e.preventDefault();
+				    $('html, body').animate({
+				        scrollTop: $(".tela2").offset().top
+				    }, 100);
+				});
+
+
 			});
 		</script>
 	</head>
@@ -778,7 +781,7 @@
 
 		  	</div>
 		  	<div style="margin-top: 40px;">
-		  		<button class="btn-tranparent" style="    font-size: 20px;width: 150px;">Cadastre-se</button>
+		  		<button class="btn-tranparent btn-cad" style="    font-size: 20px;width: 150px;">Cadastre-se</button>
 		  	</div> 
 		  </div>
 		  <div style="height: 100px;"></div>
@@ -811,7 +814,7 @@
 			  		
 			  	</div>
 			  	<div class="w-75" align="left">
-				  		<button class="btn-tranparent fs-20" style="background-color: transparent;color: white;width: 120px;margin-left: 10px;border: 1px solid white">Enviar</button>
+				  		<button class="btn-tranparent fs-20 btn-contact" style="background-color: transparent;color: white;width: 120px;margin-left: 10px;border: 1px solid white">Enviar</button>
 				  	</div>
 		  </div>
 		  <div style="width: 50%">
