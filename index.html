@@ -213,7 +213,6 @@
 					$("#formsucessoenvio").html("");
 					$("#formnomeerror").html("");
 					$("#formemailerror").html("");
-					$("#formemailerror2").html("");
 					$("#formmsgerror").html("");
 
 					if($("#formnome").val() == ""){
@@ -224,9 +223,8 @@
 						$("#formemailerror").html("Preencha seu email");
 					}
 
-					
 					if($("#formmsg").val() == ""){
-						$("#formmsgerror").html(preenchaSuaMsg);
+						$("#formmsgerror").html("Preencha a mensagem");
 					}
 
 					if($("[name=nome]").val() != "" && $("[name=email]").val() != "" && $("[name=msg]").val() != ""){
@@ -254,8 +252,7 @@
 								 $("[name=msg]").val("");
 								 
 								 $("#formmsg").val("");
-								 $("#formmsgerror").val("");
-
+								 
 								 $("#formsucessoenvio").html("Obrigado pelo contato!");
 							   },
 							   error:function(data, textStatus, request){
@@ -801,16 +798,22 @@
 		    	</div>
 		    	<div class="w-75 white-text text-left">
 			  		<input type="text" class="darkest-purple boder-none m-2 input-form" placeholder="Nome*" name="nome" style="border: 1px solid white; background:transparent;" />
+			  		<div class="formnomeerror" style="color: red"></div>
 			  	
 			  		<input type="text" class="darkest-purple boder-none m-2 input-form" placeholder="Email*" name="email"  style="border: 1px solid white; background:transparent;"  />
-			  	
-			  		<textarea class="darkest-purple boder-none m-2 input-form" placeholder="Mensagem*" name="msg"  style="border: 1px solid white; background:transparent;height: 100px" ></textarea>
+			  		<div class="formemailerror" style="color: red"></div>
 
+			  		<textarea class="darkest-purple boder-none m-2 input-form" placeholder="Mensagem*" name="msg"  style="border: 1px solid white; background:transparent;height: 100px" ></textarea>
+			  		<div class="formmsgerror" style="color: red"></div>
 			  		
 			  	</div>
 			  	<div class="w-75" align="left">
 				  		<button class="btn-tranparent fs-20 btn-contact" style="background-color: transparent;color: white;width: 120px;margin-left: 10px;border: 1px solid white">Enviar</button>
 				  	</div>
+				<div class="w-75 formsucessoenvio" align="left" style="color:green">
+					
+
+				</div>
 		  </div>
 		  <div style="width: 50%">
 		  	<div align="center" class="d-flex flex-column ">
