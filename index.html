@@ -215,15 +215,15 @@
 					$("#formemailerror").html("");
 					$("#formmsgerror").html("");
 
-					if($(".formnome").val() == ""){
+					if($("[name=nome]").val() == ""){
 						$(".formnomeerror").html("Preencha seu nome <br/>");
 					}
 
-					if($(".formemail").val() == ""){
+					if($("[name=email]").val() == ""){
 						$(".formemailerror").html("Preencha seu email <br/>");
 					}
 
-					if($(".formmsg").val() == ""){
+					if($("[name=msg]").val() == ""){
 						$(".formmsgerror").html("Preencha a mensagem <br/>");
 					}
 
