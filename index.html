@@ -215,16 +215,16 @@
 					$("#formemailerror").html("");
 					$("#formmsgerror").html("");
 
-					if($("#formnome").val() == ""){
-						$("#formnomeerror").html("Preencha seu nome");
+					if($(".formnome").val() == ""){
+						$(".formnomeerror").html("Preencha seu nome <br/>");
 					}
 
-					if($("#formemail").val() == ""){
-						$("#formemailerror").html("Preencha seu email");
+					if($(".formemail").val() == ""){
+						$(".formemailerror").html("Preencha seu email <br/>");
 					}
 
-					if($("#formmsg").val() == ""){
-						$("#formmsgerror").html("Preencha a mensagem");
+					if($(".formmsg").val() == ""){
+						$(".formmsgerror").html("Preencha a mensagem <br/>");
 					}
 
 					if($("[name=nome]").val() != "" && $("[name=email]").val() != "" && $("[name=msg]").val() != ""){
@@ -243,21 +243,20 @@
 							   url: "https://areus.com.br:10443/mensagem-form-site",
 							   success: function(data, textStatus, request){     
 							     console.log(data);
-							     $("#formnomeerror").html("");
-								 $("#formemailerror").html("");
-								 $("#formmsgerror").html("");
+							     $(".formnomeerror").html("");
+								 $(".formemailerror").html("");
+								 $(".formmsgerror").html("");
 
 								 $("[name=nome]").val("");
 								 $("[name=email]").val("");
 								 $("[name=msg]").val("");
 								 
-								 $("#formmsg").val("");
 								 
-								 $("#formsucessoenvio").html("Obrigado pelo contato!");
+								 $(".formsucessoenvio").html("Obrigado pelo contato!");
 							   },
 							   error:function(data, textStatus, request){
 							   	 	
-							   	 $("#formsucessoenvio").html("Mensagem não enviada.");
+							   	 $(".formsucessoenvio").html("Mensagem não enviada.");
 							   }
 							});
 
