@@ -1,0 +1,34 @@
+@media (max-width: 1400px) {
+  .fs-60{
+  	font-size: 30px !important;
+  }
+
+  .tela1 .fs-60{
+  	font-size: 40px !important
+  }
+
+  .tela2 .title-big{
+  	font-size: 45px !important;
+  }
+
+  .tela2  .title-thin-small {
+  	font-size: 20px;
+  }
+
+
+  .tela3 .beneficio div:nth-child(1){
+  	font-size: 16px !important;
+  }
+
+  .tela3 .fs-18{
+  	font-size: 15px !important;
+  }
+
+  .tela3 .link-beneficios-conheca {
+  	font-size: 16px !important;
+  }
+
+  .title-ganhegastando{
+  	font-size: 30px !important;
+  }
+}
