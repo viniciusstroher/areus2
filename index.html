@@ -217,14 +217,17 @@
 
 					if($("[name=nome]").val() == ""){
 						$(".formnomeerror").html("Preencha seu nome <br/>");
+						return;
 					}
 
 					if($("[name=email]").val() == ""){
 						$(".formemailerror").html("Preencha seu email <br/>");
+						return;
 					}
 
 					if($("[name=msg]").val() == ""){
 						$(".formmsgerror").html("Preencha a mensagem <br/>");
+						return;
 					}
 
 					if($("[name=nome]").val() != "" && $("[name=email]").val() != "" && $("[name=msg]").val() != ""){
@@ -850,7 +853,7 @@
 			  	</div>
 			  	<div class="w-75" align="left">
 				  		<button class="btn-tranparent fs-20 btn-contact" style="background-color: transparent;color: white;width: 120px;margin-left: 10px;border: 1px solid white">Enviar</button>
-				  		<div class="formmsgerror formemailerror formnomeerror formsucessoenvio" align="left" style="color:green">
+				  		<div class="formmsgerror formemailerror formnomeerror formsucessoenvio" align="left" style="color:white;height: 100px;margin-left: 10px;">
 					
 
 						</div>
