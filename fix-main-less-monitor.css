@@ -1,7 +1,7 @@
 
 
 
-@media (max-width: 1265px) {
+@media (min-width: 1200px) {
   .fs-60{
     font-size: 25px !important;
   }
@@ -116,7 +116,7 @@
 
 
 
-@media (max-width: 1440px) {
+@media (min-width: 1440px) {
   .fs-60{
     font-size: 30px !important;
   }
