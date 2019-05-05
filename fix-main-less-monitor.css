@@ -98,15 +98,15 @@
 
 @media (max-width: 1264px) {
   .fs-60{
-    font-size: 30px !important;
+    font-size: 25px !important;
   }
 
   .tela1 .fs-60{
-    font-size: 40px !important
+    font-size: 25px !important
   }
 
   .tela2 .title-big{
-    font-size: 45px !important;
+    font-size: 25px !important;
   }
 
   .tela2  .title-thin-small {
@@ -137,9 +137,25 @@
   .tela9 .w-25{
     width: 50% !important;
   }
+
+  .tela5 .title-big{
+    font-size:  40px;
+  }
   
+  .tela5 .title-thin-small{
+    font-size: 25px;
+  }
+
   .tela5 .radiusbox-title{
         font-size: 25px;
+  }
+
+  body > div.container-fluid.tela7 > div.row.d-flex > div.col.purple1{
+      height: 110vh !important; 
+  }
+
+  body > div.container-fluid.tela7 > div.row.d-flex > div.col.p-2.position-relative > div{
+    height: 120vh !important;
   }
 
   .tela5 .radiusbox-content{
