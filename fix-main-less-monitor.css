@@ -1,7 +1,119 @@
-
-
-
+/*validar*/
 @media  (max-width: 1440px) {
+  .fs-60{
+    font-size: 30px !important;
+  }
+
+  .tela1 .fs-60{
+    font-size: 40px !important
+  }
+
+  .tela2 .title-big{
+    font-size: 25px !important;
+  }
+
+  .tela2  .title-thin-small {
+    font-size: 20px;
+  }
+
+
+  body > div.container-fluid.tela4 > div.row.d-flex.bg-gray-soft{
+    height: 80vh !important;
+  }
+
+  body > div.container-fluid.tela7 > div.row.d-flex > div.col.p-2.position-relative > div{
+    height: 100vh !important;
+  }
+
+  body > div.container-fluid.tela7 > div.row.d-flex > div.col.purple1{
+    height: 90vh !important;
+  }
+  body > div.container-fluid.tela7 > div.row.d-flex > div.col.p-2.position-relative > div{
+    top: -30px !important;
+  }
+
+  body > div.container-fluid.tela8 > div.row.d-flex.bg-gray-soft{
+    height: 65vh !important;
+  }
+
+  .tela3 .beneficio div:nth-child(1){
+    font-size: 16px !important;
+  }
+
+  .tela3 .fs-18{
+    font-size: 15px !important;
+  }
+
+  .tela3 .link-beneficios-conheca {
+    font-size: 16px !important;
+  }
+
+  .tela3 .beneficio{
+    height: 140px;
+  }
+
+  .tela8 .title-big{
+        font-size: 26px !important;
+  }
+  
+  .tela9 .w-25{
+    width: 50% !important;
+  }
+  
+  .tela5 .radiusbox-title{
+        font-size: 25px;
+  }
+
+  .tela5 .radiusbox-content{
+    font-size: 18px !important;
+  }
+
+  .tela4 .cashback-box{
+    margin-top: 20px !important;
+  }
+
+  .tela4 .title-cashback{
+    margin-bottom: 20px !important;
+  }
+
+  .tela4 .cashback-bg{
+    left: -100px !important;
+  }
+  
+  .tela4 > div.row.d-flex.bg-gray-soft > div.col.p-2.position-relative > div.white-text.ff-poppins.fs-25.position-absolute.purple-text.fw-bold.text-left{
+    bottom: -20px !important;
+  }
+
+  .tela4 .beneficio div:nth-child(1){
+    font-size: 14px !important;
+  }
+
+  .tela4 > div.row.d-flex.bg-gray-soft > div:nth-child(2) > div > div:nth-child(2){
+    margin-bottom: 20px !important;
+  }
+
+  .tela5 .radiusbox{
+    width: 300px !important;
+  }
+
+  .tela7 .title-cashback{
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .tela7 .title-ganhegastando{
+    margin-bottom: 20px !important;
+  }
+
+  .title-ganhegastando{
+    font-size: 30px !important;
+  }
+
+
+}
+
+
+/*@media  (max-width: 1440px) {
   .fs-60{
     font-size: 30px !important;
   }
@@ -51,9 +163,6 @@
     font-size: 18px !important;
   }
 
- /* .tela5 > div.row.d-flex.purple1.justify-content-center > div{
-    width: 100% !important;
-  }*/
   .tela4 .cashback-box{
     margin-top: 20px !important;
   }
@@ -168,9 +277,7 @@
     font-size: 18px !important;
   }
 
- /* .tela5 > div.row.d-flex.purple1.justify-content-center > div{
-    width: 100% !important;
-  }*/
+
   .tela4 .cashback-box{
     margin-top: 20px !important;
   }
@@ -214,3 +321,4 @@
 
 
 }
+*/
