@@ -261,7 +261,9 @@
     .tela4 .cashback-box{
       margin-top: 20px !important;
     }
-
+    .tela4 .beneficio{
+      height: 110px !important;
+    }
     .tela4 .title-cashback{
       margin-bottom: 20px !important;
     }
