@@ -7,7 +7,8 @@
       zoom:1;
     }
     /* Your code to swap higher DPI images */
-  }
+
+
 
 
 @media  (max-width: 1440px) {
@@ -60,9 +61,6 @@
     font-size: 18px !important;
   }
 
- /* .tela5 > div.row.d-flex.purple1.justify-content-center > div{
-    width: 100% !important;
-  }*/
   .tela4 .cashback-box{
     margin-top: 20px !important;
   }
@@ -177,9 +175,7 @@
     font-size: 18px !important;
   }
 
- /* .tela5 > div.row.d-flex.purple1.justify-content-center > div{
-    width: 100% !important;
-  }*/
+
   .tela4 .cashback-box{
     margin-top: 20px !important;
   }
