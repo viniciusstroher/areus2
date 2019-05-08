@@ -133,7 +133,7 @@
     /* Your code to swap higher DPI images */
 
 
-@media  only screen and (-webkit-max-device-pixel-ratio: 1.0),
+@media  only screen and (-webkit-max-device-pixel-ratio: 1),
   only screen and (max-resolution: 100dpi){
   /*validar*/
   @media  (max-width: 1440px) {
