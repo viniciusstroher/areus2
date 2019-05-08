@@ -207,8 +207,9 @@
     }
 
 
+
     body > div.container-fluid.tela4 > div.row.d-flex.bg-gray-soft{
-      height: 80vh !important;
+      height: 85vh !important;
     }
 
     body > div.container-fluid.tela7 > div.row.d-flex > div.col.p-2.position-relative > div{
@@ -273,7 +274,7 @@
     }
     
     .tela4 > div.row.d-flex.bg-gray-soft > div.col.p-2.position-relative > div.white-text.ff-poppins.fs-25.position-absolute.purple-text.fw-bold.text-left{
-      bottom: -20px !important;
+      bottom: 50px !important;
     }
 
     .tela4 .beneficio div:nth-child(1){
