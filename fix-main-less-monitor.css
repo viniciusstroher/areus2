@@ -131,10 +131,11 @@
 
     }
     /* Your code to swap higher DPI images */
+}
 
-
-@media  only screen and (-webkit-max-device-pixel-ratio: 1),
+@media  only screen and (-webkit-max-device-pixel-ratio: 1.1),
   only screen and (max-resolution: 100dpi){
+   
   /*validar*/
   @media  (max-width: 1440px) {
     .fs-60{
@@ -245,6 +246,10 @@
     .title-ganhegastando{
       font-size: 30px !important;
     }
+
+
+
+  }
 
 
   }
