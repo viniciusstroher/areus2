@@ -18,7 +18,9 @@
       .fs-30{
         font-size: 20px !important;
       }
-
+      .fs-25{
+            font-size: 15px !important;
+      }
       .tela1 .fs-60{
         font-size: 30px !important
       }
@@ -37,7 +39,7 @@
 
 
       body > div.container-fluid.tela4 > div.row.d-flex.bg-gray-soft{
-        height: 80vh !important;
+        height: 100vh !important;
       }
 
       body > div.container-fluid.tela7 > div.row.d-flex > div.col.p-2.position-relative > div{
@@ -50,11 +52,15 @@
       body > div.container-fluid.tela7 > div.row.d-flex > div.col.p-2.position-relative > div{
         top: -30px !important;
       }
-
+      body > div:nth-child(5){
+        display: none;
+      }
       body > div.container-fluid.tela8 > div.row.d-flex.bg-gray-soft{
         height: 65vh !important;
       }
-
+      .cashback-bg{
+        top: 0 !important;
+      }
       .tela3 .beneficio div:nth-child(1){
         font-size: 16px !important;
       }
@@ -63,12 +69,51 @@
         font-size: 15px !important;
       }
 
+      .tela3 .title-grey-bold{
+        font-size: 30px!important;
+      }
+
       .tela3 .link-beneficios-conheca {
         font-size: 16px !important;
       }
 
       .tela3 .beneficio{
-        height: 140px;
+        height: 180px;
+      }
+
+      .ecosistema-bg{
+ 
+        width: 50vw !important;
+        height: 80vh !important;
+        top: -45px !important;
+        left: -10px !important;
+      }
+
+      .tela4 .beneficio{
+        height: 150px !important;
+      }
+      .tela5 .title-big{
+        font-size: 30px !important;
+      }
+
+      .title-ganhegastando{
+        font-size: 25px !important;
+      }
+
+      .tela5 .radiusbox-title{
+        font-size: 20px !important;
+      }
+
+      .tela5 .radiusbox-content{
+        font-size: 12px !important;
+      }
+
+      .tela5 .title-thin-small{
+        font-size: 20px !important;
+      }
+
+      .tela3 .link-beneficios-conheca{
+        margin-top: 50px !important;
       }
 
       .tela8 .title-big{
@@ -84,7 +129,7 @@
       }
 
       .tela5 .radiusbox-content{
-        font-size: 18px !important;
+        font-size: 12px !important;
       }
 
       .tela4 .cashback-box{
@@ -112,14 +157,20 @@
       }
 
       .tela5 .radiusbox{
-        width: 300px !important;
+        width: 250px !important;
       }
 
       .tela7 .title-cashback{
         margin-top: 20px !important;
         margin-bottom: 20px !important;
       }
+      .tela6 .title-big{
+        font-size: 30px !important;
+      }
 
+      .tela6 .title-thin-small{
+        font-size: 20px !important;
+      }
       .tela7 .title-ganhegastando{
         margin-bottom: 20px !important;
       }
@@ -128,6 +179,7 @@
         font-size: 30px !important;
       }
 
+      
 
     }
     /* Your code to swap higher DPI images */
