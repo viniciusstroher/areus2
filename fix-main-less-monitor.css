@@ -82,7 +82,7 @@
       }
 
       .tela3 .beneficio div:nth-child(1){
-        font-size: 12px !important;
+        font-size: 14px !important;
       }
       .tela3 .beneficio div:nth-child(2){
         font-size: 12px !important;
@@ -215,15 +215,15 @@
     }
 
     .tela7 .beneficio div:nth-child(1) {
-      font-size: 12px !important;
+      font-size: 14px !important;
     }
 
     .tela7 .beneficio div:nth-child(2) {
-      font-size: 10px !important;
+      font-size: 12px !important;
     }
 
     .tela7 .beneficio{
-      height: 70px !important;
+      height: 80px !important;
     }
     /* Your code to swap higher DPI images */
 }
