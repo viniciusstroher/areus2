@@ -56,7 +56,7 @@
         display: none;
       }
       body > div.container-fluid.tela8 > div.row.d-flex.bg-gray-soft{
-        height: 65vh !important;
+        height: 80vh !important;
       }
       .cashback-bg{
         top: 0 !important;
@@ -74,11 +74,18 @@
       }
 
       .tela3 .link-beneficios-conheca {
-        font-size: 16px !important;
+        font-size: 12px !important;
       }
 
       .tela3 .beneficio{
-        height: 180px;
+        height: 140px;
+      }
+
+      .tela3 .beneficio div:nth-child(1){
+        font-size: 12px !important;
+      }
+      .tela3 .beneficio div:nth-child(2){
+        font-size: 12px !important;
       }
 
       .ecosistema-bg{
@@ -143,6 +150,14 @@
       .tela4 .cashback-bg{
         left: -100px !important;
       }
+
+      .tela4 .beneficio div:nth-child(2) div:nth-child(1){
+        font-size: 12px !important;
+      }
+
+      .tela4 .beneficio div:nth-child(2) div:nth-child(2){
+        font-size: 10px !important;
+      }
       
       .tela4 > div.row.d-flex.bg-gray-soft > div.col.p-2.position-relative > div.white-text.ff-poppins.fs-25.position-absolute.purple-text.fw-bold.text-left{
         bottom: -20px !important;
@@ -158,6 +173,10 @@
 
       .tela5 .radiusbox{
         width: 250px !important;
+      }
+
+      .tela4 .beneficio{
+        height: 90px !important;
       }
 
       .tela7 .title-cashback{
@@ -179,8 +198,32 @@
         font-size: 30px !important;
       }
 
-      
+      .title-ganhegastando{
+        font-size: 25px !important;
+      }
+      .link-beneficios-conheca{
+        font-size: 12px !important;
+      }
+      .tela8 .title-thin-small{
+        font-size: 15px !important;
+      }
+    }
 
+
+    body > div.container-fluid.tela7 > div.row.d-flex > div.col.purple1 > div{
+      width: 90% !important;
+    }
+
+    .tela7 .beneficio div:nth-child(1) {
+      font-size: 12px !important;
+    }
+
+    .tela7 .beneficio div:nth-child(2) {
+      font-size: 10px !important;
+    }
+
+    .tela7 .beneficio{
+      height: 70px !important;
     }
     /* Your code to swap higher DPI images */
 }
@@ -262,9 +305,11 @@
     .tela4 .cashback-box{
       margin-top: 20px !important;
     }
+
     .tela4 .beneficio{
       height: 90px !important;
     }
+
     .tela4 .title-cashback{
       margin-bottom: 20px !important;
     }
@@ -278,7 +323,7 @@
     }
 
     .tela4 .beneficio div:nth-child(2) div:nth-child(2){
-      font-size: 12px !important;
+      font-size: 10px !important;
     }
 
     .tela4 > div.row.d-flex.bg-gray-soft > div.col.p-2.position-relative > div.white-text.ff-poppins.fs-25.position-absolute.purple-text.fw-bold.text-left{
