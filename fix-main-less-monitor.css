@@ -263,7 +263,7 @@
       margin-top: 20px !important;
     }
     .tela4 .beneficio{
-      height: 110px !important;
+      height: 90px !important;
     }
     .tela4 .title-cashback{
       margin-bottom: 20px !important;
@@ -273,6 +273,14 @@
       left: -100px !important;
     }
     
+    .tela4 .beneficio div:nth-child(2) div:nth-child(1){
+      font-size: 12px !important;
+    }
+
+    .tela4 .beneficio div:nth-child(2) div:nth-child(2){
+      font-size: 12px !important;
+    }
+
     .tela4 > div.row.d-flex.bg-gray-soft > div.col.p-2.position-relative > div.white-text.ff-poppins.fs-25.position-absolute.purple-text.fw-bold.text-left{
       bottom: 50px !important;
     }
