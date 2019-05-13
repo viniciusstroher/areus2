@@ -1,0 +1,150 @@
+/*btn*/
+.btn-round{
+	border-radius: 50px;
+	color:black;
+	border: 1px solid white;
+	padding: 10px;
+}
+/*btn*/
+
+/*font-family*/
+.ff-poppins{
+	font-family: 'Poppins';
+}
+/*font-family*/
+
+/*bg*/
+.bg-amarelo{
+	background-color: #F8DC49 !important;
+}
+.bg-transparent{
+	background-color: transparent !important;
+}
+
+.bg-purple1{
+	background-color: #6868FE;
+}
+
+.bg-gray-soft{
+	background-color: #f6f6f6;
+}
+/*bg*/
+
+/*text*/
+.text-white{
+	color: white !important;
+}
+/*text*/
+
+/*font-size*/
+.fs-15{
+	font-style: 15px;
+}
+.fs-20{
+	font-size: 20px;
+}
+
+.fs-30{
+	font-size: 30px;
+}
+.fs-40{
+	font-size: 40px;	
+}
+.fs-50{
+	font-size: 50px;	
+}
+.fs-60{
+	font-size: 60px;
+}
+
+.fs-25{
+	font-size: 25px;
+}
+
+.fs-18{
+	font-size: 18px;
+}
+/*font-size*/
+
+/*font weight*/
+.fw-600{
+	font-weight: 600;
+}
+.fw-800{
+	font-weight: 800;
+}
+.fw-bold{
+	font-weight: bold;
+}
+/*font weight*/
+
+
+/*tela1*/
+.box-left-nova-forma-pagar{
+	width: 60%;
+	text-align: center;
+}
+
+.box-righ-contador{
+	width: 55%;
+}
+
+/*tela3 beneficio*/
+
+.beneficio-box{
+	width: 70%;				
+}
+.beneficios-tipos{
+	border-radius: 50px;
+	background-color:#6868FE;
+	height: 70px;
+	text-align: center;
+	color:white;
+	font-size: 30px; 
+	line-height: 2;
+}
+
+.beneficio{
+	height: 120px;
+}
+.beneficio img{
+	width: 60px;
+	height: 60px;
+}
+.beneficio div:nth-child(1){
+	color:#6868FE;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.link-beneficios-conheca{
+	color:#0074FF;
+	font-size: 18px;
+}
+
+
+/*tela3 beneficio*/
+
+/*tela4 cashback*/
+.cashback-box{
+	width: 75%;	
+}
+/*tela4 cashback*/
+
+
+
+/*tela5 ecosistema*/
+.ecosistema-box{
+	width: 60%;
+}
+/*tela5 ecosistema*/
+
+/*tela6 programa de indicacoes*/
+.programa-box{
+	width: 90%
+}
+/*tela6 programa de indicacoes*/
+
+.navbar-brand{
+	    margin-right: 26rem;
+}

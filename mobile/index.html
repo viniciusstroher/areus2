@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Areus</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<script src="https://code.jquery.com/jquery-3.3.1.js" ></script>
+		<script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+		<link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.css"/>
+		<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+		<link href='main.css' rel='stylesheet'>
+		<link href='fix-main-less-monitor.css' rel='stylesheet'>
+		<style>
+			.boder-none{
+				border: none;
+			}
+			.brown-text{
+				color:#666666 !important;
+			}
+			.white-text{
+				color:white !important;
+			}
+			.purple-text{
+				color:#6868FE !important;
+			}
+
+			.blue-text{
+				color: #0074FF !important;
+			}
+
+		    .purple1{
+		    	background-color:#6868FE;
+		    }
+		    
+		    .purple2{
+		    	background-color: #6868FE;
+		    }
+
+			.darkest-purple{
+				background-color:#1C1C5A;
+			}
+
+			.transparent{
+				background-color: transparent !important;
+			}
+
+			.desktop-bg{
+				background: url('img/home areus.jpg');
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+			.pagementos-bg{
+				background: url('img/pagamentos.jpg');
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+			.cashback-bg{
+				background: url('img/cashback.jpg');
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+
+			.ecosistema-bg{
+				background: url('img/ecossistema.jpg');
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+			.token-bg{
+				background: url('img/token.jpg');
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+			.heigh-top-banner{
+				height: 110px;
+			}
+
+			.monitor-height{
+				height: 100vh;
+			}
+			.monitor-height-120{
+				height: 120vh;
+			}
+
+			
+			.nav-link{
+				color: white !important;
+				font-size: 20px !important;
+			}
+
+			.navbar-nav{
+				width: 100%;
+			    display: flex;
+			    justify-content: space-evenly;
+			}
+
+			.btn-tranparent{
+				background-color: transparent;
+				border-radius: 50px;
+				color:white;
+				border: 1px solid white;
+				padding: 10px;
+				
+			}
+
+			.btn-amarelo{
+				background-color: #F8DC49 ;
+				border-radius: 50px;
+				color:black;
+				border: 1px solid white;
+				padding: 10px;
+			}
+
+			.box-1{
+				width: 50%;
+				text-align: left;
+			}
+			
+
+			.title-small{
+				color: white;
+				font-size: 30px;
+				font-weight: 600;
+				font-family: 'Poppins';
+			}
+
+			.title-big{
+				color: white;
+				font-size: 50px;
+				font-weight: 800;
+				font-family: 'Poppins';
+			}
+
+			.title-thin-small{
+				color: white;
+				font-size: 30px;
+				font-family: 'Poppins';
+			}
+
+
+			.title-grey-bold{
+				color:#666666;
+				font-size: 40px;
+				font-weight: bold;
+				font-family: 'Poppins';
+			}
+
+			.title-facaparte{
+				color: white;
+				font-size: 30px;
+				font-weight: 600;
+				font-family: 'Poppins';
+			}
+
+			.title-cashback{
+				font-size: 30px;
+				color:#666666;
+				font-family: 'Poppins';
+			}
+
+			.title-ganhegastando{
+				font-size: 50px;
+				color:#6868FE;
+				font-weight:900;
+				font-family: 'Poppins';
+			}
+
+			
+
+			.radiusbox{
+				border-radius: 20px;
+				padding: 25px;
+				width: 400px;
+				border: 2px solid white;
+			}
+
+			.radiusbox-title{
+				font-size: 30px;
+				font-weight: 600;
+				color: white;
+
+			}
+
+			.radiusbox-content{
+				font-size: 20px;
+				color: white;
+			}
+
+
+			.input-form{
+				height:40px;
+				color: white;
+				font-size: 18px;
+				width: 100%;
+				font-family: unset;
+				padding-left: 5px;
+			}
+
+			.input-form::placeholder{
+				font-family: unset;
+				color: white;
+				font-size: 18px;
+				padding-left: 5px;
+			}
+		</style>
+		<script>
+			$(document).ready(function(){
+				jQuery.support.cors = true;
+				//FORMULARIO
+				$(".btn-contact").click(function(){
+					
+					$("#formsucessoenvio").html("");
+					$("#formnomeerror").html("");
+					$("#formemailerror").html("");
+					$("#formmsgerror").html("");
+
+					if($("[name=nome]").val() == ""){
+						$(".formnomeerror").html("Preencha seu nome <br/>");
+						return;
+					}
+
+					if($("[name=email]").val() == ""){
+						$(".formemailerror").html("Preencha seu email <br/>");
+						return;
+					}
+
+					if($("[name=msg]").val() == ""){
+						$(".formmsgerror").html("Preencha a mensagem <br/>");
+						return;
+					}
+
+					if($("[name=nome]").val() != "" && $("[name=email]").val() != "" && $("[name=msg]").val() != ""){
+
+						var form = {
+									    nome:  $("[name=nome]").val() ,
+									    email: $("[name=email]").val(),
+									    msg :  $("[name=msg]").val(),
+									    tipo:  "CONTATO",
+									    lang:  'pt'
+									}
+						$.ajax({ 
+							   type: "POST",
+							   dataType: "json",
+							   data:form,
+							   url: "https://areus.com.br:10443/mensagem-form-site",
+							   success: function(data, textStatus, request){     
+							     console.log(data);
+							     $(".formnomeerror").html("");
+								 $(".formemailerror").html("");
+								 $(".formmsgerror").html("");
+
+								 $("[name=nome]").val("");
+								 $("[name=email]").val("");
+								 $("[name=msg]").val("");
+								 
+								 
+								 $(".formsucessoenvio").html("Obrigado pelo contato!");
+							   },
+							   error:function(data, textStatus, request){
+							   	 	
+							   	 $(".formsucessoenvio").html("Mensagem não enviada.");
+							   }
+							});
+
+					}
+					
+				});
+
+				//lista de espera
+				$(".btn-cad").click(function(){
+					
+					$("#formsucessoenviocad").html("");
+					$("#formerrorcad").html("");
+				
+					if($("[name=nome_cad]").val() == ""){
+						$(".formerrorcad").html("Preencha seu nome <br/>");
+						return;
+					}
+
+					if($("[name=email_cad]").val() == ""){
+						$(".formerrorcad").html("Preencha seu email <br/>");
+						return;
+					}
+
+					if($("[name=nome_cad]").val() != "" && $("[name=email_cad]").val() != "" ){
+
+						var form = {
+									    nome:  $("[name=nome_cad]").val() ,
+									    email: $("[name=email_cad]").val(),
+									    msg :  '',
+									    tipo:  "CADASTRO",
+									    lang:  'pt'
+									}
+						$.ajax({ 
+							   type: "POST",
+							   dataType: "json",
+							   data:form,
+							   url: "https://areus.com.br:10443/mensagem-form-site",
+							   success: function(data, textStatus, request){     
+							     console.log(data);
+							     $(".formerrorcad").html("");
+								 
+								 $("[name=nome_cad]").val("");
+								 $("[name=email_cad]").val("");
+								 
+								 
+								 $(".formsucessoenviocad").html("Obrigado por se registrar!");
+							   },
+							   error:function(data, textStatus, request){
+							   	 	
+							   	 $(".formsucessoenviocad").html("O processo de registro falhou.");
+							   }
+							});
+
+					}
+					
+				});
+
+
+				//pagamentos
+				$("#navbarSupportedContent > ul > li:nth-child(1) > a").click(function(e) {
+
+					e.preventDefault();
+				    $('html, body').animate({
+				        scrollTop: $(".tela2").offset().top
+				    }, 100);
+				});
+
+				//cashback
+				$("#navbarSupportedContent > ul > li:nth-child(2) > a").click(function(e) {
+
+					e.preventDefault();
+				    $('html, body').animate({
+				        scrollTop: $(".tela4").offset().top
+				    }, 100);
+				});
+
+				//ecossistema
+				$("#navbarSupportedContent > ul > li:nth-child(3) > a").click(function(e) {
+
+					e.preventDefault();
+				    $('html, body').animate({
+				        scrollTop: $(".tela5").offset().top
+				    }, 100);
+				});
+
+				//token
+				$("#navbarSupportedContent > ul > li:nth-child(4) > a").click(function(e) {
+
+					e.preventDefault();
+				    $('html, body').animate({
+				        scrollTop: $(".tela7").offset().top
+				    }, 100);
+				});
+
+				//ico
+				$("#navbarSupportedContent > ul > li:nth-child(4) > a").click(function(e) {
+
+					e.preventDefault();
+				    $('html, body').animate({
+				        scrollTop: $(".tela8").offset().top
+				    }, 100);
+				});
+
+				//lista de espera
+				$("body > div.container-fluid.desktop-bg.tela1 > div.row.d-flex > div:nth-child(1) > div > div:nth-child(3) > button").click(function(e) {
+
+					e.preventDefault();
+				    $('html, body').animate({
+				        scrollTop: $(".tela9").offset().top
+				    }, 100);
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light transparent position-absolute w-100 pt-3">
+		  <div class="col-xl-6 heigh-top-banner" align="center">
+		  	 <a class="navbar-brand" href="#">
+		  	 	<img width="96" height="96" src="img/logo_small.svg"/>
+		  	 </a>
+		  </div>
+		 
+		  <!-- MOBILE -->
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <!-- pc -->
+		  <div class="col-xl-6 heigh-top-banner">
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav mr-auto " style="    width: 85%;">
+			      <li class="nav-item active">
+			        <a class="nav-link" href="#">Pagementos <span class="sr-only">(current)</span></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#">Cashback</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#">Ecossistema</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#">Token</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#">ICO</a>
+			      </li>
+			    </ul>
+			    
+			  </div>
+			 
+		  </div>
+		</nav>
+
+
+
+		<!-- tela 1 banner -->
+		<div class="container-fluid desktop-bg tela1" style="height: 100vh;">
+		  <div style="height: 35% !important;"></div>
+		  <div class="row d-flex">
+		    
+		    <div align="center" class="col p-2">
+		      <div class="box-left-nova-forma-pagar">
+		      	 <div class="text-white fs-30 fw-600 ff-poppins">Uma nova forma de</div>
+		     	 <div class="text-white fs-60 fw-600 ff-poppins">Pagar, receber e ganhar dinheiro</div>
+		     	 <div style="margin-top: 35px;margin-bottom: 20px;">
+		     	 	<button class="btn-round bg-amarelo fw-bold m-2" style="width:200px">Lista de espera</button>
+		     	 </div>
+		     	 <div>
+		     	 	<div class="text-white ff-poppins" style="width: 100%" align="center">Cadastre-se e seja um dos primeiros a participar</div>
+		     	 </div>
+		      </div>
+		    </div>
+		    
+		    
+		    
+		  </div>
+		</div>
+		<!-- 1 tela banner -->
+
+		<!--  TELA 2 pagamentos -->
+		<div class="container-fluid tela2">
+		  
+		  <div class="row d-flex flex-column" style="width: 100vw">
+		      <div class="pagementos-bg" style="width: 100vw;height: 80vh"></div>
+		      <div style="width: 100%;" align="center">
+			      <div class="box-1" style="width: 60%;">
+			      	 <div class=" ff-poppins fs-30" style="text-align: center;margin-bottom: 40px;margin-top: 40px;color: #6868FE;">Pagamentos</div>
+			     	 <div class=" ff-poppins fs-40 ff-bold" style="text-align: center;color: #6868FE;margin-bottom: 40px;" >Pagar e receber com muito mais facilidade e transparência</div>
+
+			     	 <div class="ff-poppins ff-20 title-grey-bold" style="text-align: center;    width: 100%;font-size: 25px;	">Somos um ecossistema de pagamentos que mudará sua relação com o dinheiro</div>
+			      </div>
+			    </div>
+		    </div>
+		</div>
+		<!-- 2 TELA pagamentos -->
+
+
+		<!-- tela 3 - beneficios -->
+		<div class="container-fluid tela3" >
+		  <div align="center" class="col title-grey-bold">Benefícios de usar Areus</div>
+		  <div style="height: 100px;"></div>
+		  <div align="center">
+		  	<div class="row d-flex flex-column " style="width:60%">
+		    
+		    <div align="center" class="col p-2">
+		      <div class="beneficio-box">
+		      	 <div class="btn-round bg-purple1 w-75 text-white fs-25 fw-bold mb-5">para o consumidor</div>
+		      	 
+		      	 <div class="beneficio d-flex flex-row mt-2">
+		      	 	<div class="p-2 mr-2">
+		      	 		<img src="img/heart.svg"/>
+		      	 	</div>
+		      	 	<div class="d-flex flex-column text-left">
+		      	 		<div class="ff-poppins fs-20">Sem mensalidade ou anuidade</div>
+		      	 		<div class=" fs-18">Baixe o app e crie um conta 100% free! Não temos mensalidades, anuidade ou outras taxas escondidas.</div>
+		      	 	</div>
+		      	 </div>
+
+		      	 <div class="beneficio d-flex flex-row mt-2">
+		      	 	<div class="p-2 mr-2">
+		      	 		<img src="img/pig.svg"/>
+		      	 	</div>
+		      	 	<div class="d-flex flex-column text-left">
+		      	 		<div class="ff-poppins">Ganhe dinheiro</div>
+		      	 		<div class="fs-18">Compre em suas loja físicas e virtuais preferidas e receba parte do valor pago de volta.</div>
+		      	 	</div>
+		      	 </div>
+		     
+
+		     	 <div class="beneficio d-flex flex-row mt-2">
+		      	 	<div class="p-2 mr-2">
+		      	 		<img src="img/finger.svg"/>
+		      	 	</div>
+		      	 	<div class="d-flex flex-column text-left">
+		      	 		<div class="ff-poppins">Faça pagamentos e transferências</div>
+		      	 		<div class="fs-18">Faça pagamentos em lojas físicas e virtuais, além de transferir seu dinheiro para qualquer lugar do mundo.</div>
+		      	 	</div>
+		      	 </div>
+		     	
+		     	<div class="beneficio d-flex flex-row mt-2">
+		      	 	<div class="p-2 mr-2">
+		      	 		<img src="img/wallet.svg"/>
+		      	 	</div>
+		      	 	<div class="d-flex flex-column text-left">
+		      	 		<div class="ff-poppins">Tenha uma carteira digital</div>
+		      	 		<div class="fs-18">Guarde seu dinheiro em sua carteira! Diferente de instituições financeiras, nós não temos nenhum tipo de acesso ou controle do que está em sua carteira.</div>
+		      	 	</div>
+		      	 </div>
+		     	 <div class="link-beneficios-conheca mt-2 mb-5 ">Conheça todos o benefícios para consumidor</div>
+		     
+		      </div>
+		    </div>
+		    
+		    <div align="center" class="col p-2">
+		      <div class="beneficio-box">
+		      	<div class="mb-5 btn-round bg-purple1 w-75 text-white fs-25 fw-bold">para o lojista</div>
+		      	<div class="beneficio d-flex flex-row mt-2">
+		      	 	<div class="p-2 mr-2">
+		      	 		<img src="img/heart.svg"/>
+		      	 	</div>
+		      	 	<div class="d-flex flex-column text-left">
+		      	 		<div class="ff-poppins">Menores taxas no mercado</div>
+		      	 		<div class="fs-18">Torne seu negócio mais lucrativo eliminando taxas desnecessárias.</div>
+		      	 	</div>
+		      	 </div>
+
+		      	 <div class="beneficio d-flex flex-row mt-2">
+		      	 	<div class="p-2 mr-2">
+		      	 		<img src="img/scissor.svg"/>
+		      	 	</div>
+		      	 	<div class="d-flex flex-column text-left">
+		      	 		<div class="ff-poppins">Sem vínculo com sistema de cartões</div>
+		      	 		<div class="fs-18">Receba pagamentos sem precisar de acessórios extras. Utilize apenas um smartphone, tablet ou computador.</div>
+		      	 	</div>
+		      	 </div>
+		     
+
+		     	 <div class="beneficio d-flex flex-row mt-2">
+		      	 	<div class="p-2 mr-2">
+		      	 		<img src="img/smile.svg"/>
+		      	 	</div>
+		      	 	<div class="d-flex flex-column text-left">
+		      	 		<div class="ff-poppins">Fidelize e atraia mais clientes</div>
+		      	 		<div class="fs-18">Seja um estabelecimento que recebe pagamentos com Areus e fique á frente da concorrência.</div>
+		      	 	</div>
+		      	 </div>
+		     	
+		     	<div class="beneficio d-flex flex-row mt-2">
+		      	 	<div class="p-2 mr-2">
+		      	 		<img src="img/rocket.svg"/>
+		      	 	</div>
+		      	 	<div class="d-flex flex-column text-left">
+		      	 		<div class="ff-poppins">Business intelligence</div>
+		      	 		<div class="fs-18">Tenha acesso a dados importantes sobre hábitos de consumo de seus clientes e crie estratégias lucrativas para seu negócio.</div>
+		      	 	</div>
+		      	 </div>
+		      </div>
+		       <div class="link-beneficios-conheca mt-2 mb-5">Conheça todos o benefícios para lojista</div>
+		    </div>
+		    
+		  </div>
+
+		  </div>
+		</div>
+		<div style="height: 100px;"></div>
+		<!-- tela 3 - beneficios -->
+
+
+		<!-- 4 TELA cashback -->
+		<div class="container-fluid tela4" >
+
+		  <div style="height: 100px;"></div>
+		  <div class="row d-flex bg-gray-soft" style="    height: 70vh;">
+		    
+		    <div align="center" class="col p-2 position-relative">
+		      <div class="box-1 position-absolute cashback-bg" style="width: 70vw;height: 70vh;top:-150px;left:-10px">
+		      	
+		      </div>
+		      <div class="white-text ff-poppins fs-25 position-absolute purple-text fw-bold text-left float-text-cashback" style="bottom: 15px;width: 28vw;left: 50%;transform: translate(-50%, -50%);">Compre em suas lojas preferidas e receba parte do valor da compra de volta</div>
+		    </div>
+		    
+		    <div align="center" class="col p-2">
+		      <div class="cashback-box " style="margin-top: 50px">
+		      	<div class="title-cashback ff-30" align="left" style="margin-bottom: 40px">Cashback</div>
+		      	<div style="width: 100%;margin-bottom: 40px" align="left">
+		      		<div class="title-ganhegastando"  style="width: 60%">Ganhe dinheiro gastando</div>
+		      	</div>
+
+
+		      	<div style="width: 100%" align="left">
+		      		<div style="width: 70%">
+			      		<div class="beneficio d-flex flex-row mt-2" style="    height: 90px;">
+				      	 	<div class="p-2 mr-2">
+				      	 		<img src="img/hand.svg"/>
+				      	 	</div>
+				      	 	<div class="d-flex flex-column text-left">
+				      	 		<div class="ff-poppins">Não é desconto, é dinheiro de volta</div>
+				      	 		<div style="height: 50px;">A cada compra, receba parte do valor pago de volta na hora, para usar onde e quando quiser.</div>
+				      	 	</div>
+				      	 </div>
+
+				      	 
+				     
+
+				     	 <div class="beneficio d-flex flex-row mt-2" style="    height: 90px;">
+				      	 	<div class="p-2 mr-2">
+				      	 		<img src="img/rocketcash.svg"/>
+				      	 	</div>
+				      	 	<div class="d-flex flex-column text-left">
+				      	 		<div class="ff-poppins">Receba o cashback após a compra</div>
+				      	 		<div style="height: 50px;">Logo após a compra você recebe seu cashback em sua carteira Areus.</div>
+				      	 	</div>
+				      	 </div>
+
+				      	 <div class="beneficio d-flex flex-row mt-2" style="    height: 90px;">
+				      	 	<div class="p-2 mr-2">
+				      	 		<img src="img/timer.svg"/>
+				      	 	</div>
+				      	 	<div class="d-flex flex-column text-left"  >
+				      	 		<div class="ff-poppins">Saldo nunca expira</div>
+				      	 		<div style="height: 50px;">Seu cashback não tem prazo de validadade.</div>
+				      	 	</div>
+				      	 </div>
+
+			      	</div>
+			     	
+			     	
+			    </div>
+		      	</div>
+		    
+		  </div>
+		</div>
+	</div>
+	<!-- 4 TELA cashback -->
+	<!-- 5 TELA ecosistema -->
+		<div class="container-fluid tela5" >
+
+		  <div style="height: 100px;"></div>
+		  <div class="row d-flex purple1">
+		    
+		   
+		    
+		    <div align="center" class="col p-2">
+		      <div class="ecosistema-box">
+		      	<div class="title-thin-small " align="left"  style="    padding-top: 50px;margin-bottom: 40px">Ecossistema</div>
+		      	<div class="title-big" align="left" style="margin-bottom: 40px">Você faz parte ativamente do ecossistema</div>
+		      	<div class="title-thin-small" align="left">Acreditamos em um mundo onde o coletivo é maior do que o individual.</div>
+		      	<div class="title-thin-small" align="left" >Juntos, podemos fazer mais!</div>
+
+		      	
+		    </div>
+		    
+		  </div>
+		   <div align="center" class="col p-2 position-relative">
+		      <div class="box-1 position-absolute ecosistema-bg" style="width: 50vw;height: 66vh;top:-100px;left:-10px">
+		      	
+		      </div>
+		      <div class="title-ganhegastando">Compre em suas lojas preferidas e receba parte do valor da compra de volta</div>
+		    </div>
+		</div>
+		<div class="row d-flex purple1 justify-content-center" align="center" style="padding-top: 80px;padding-bottom: 80px;">
+			<div class="d-flex flex-row justify-content-around" style="width: 88%">
+				<div class="radiusbox">
+					<div class="radiusbox-title">
+						Faça a diferença
+					</div>
+					<div class="radiusbox-content">
+						Queremos fazer a diferença no mundo! Juntos, podemos quebrar paradigmas históricos e desenharmos um novo futuro.
+					</div>
+				</div>
+				<div class="radiusbox">
+					<div class="radiusbox-title">
+						Todos ganham
+					</div>
+					<div class="radiusbox-content">
+						Nosso ecossistema foi criado para que todos ganhem benefícios: lucros na sua carteira, transparência no serviço e muito mais.
+					</div>
+				</div>
+				<div class="radiusbox">
+					<div class="radiusbox-title">
+						Participe da comunidade
+					</div>
+					<div class="radiusbox-content">
+						Somos uma marca que gosta de interagir com você! Participe das tomadas de decisão e frequente nossos forúns e eventos exclusivos.
+					</div>
+				</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 5 TELA ecosistema -->
+
+
+		<!--  TELA 6 programa de indicações -->
+		<div class="container-fluid tela6">
+		  <div style="height: 100px;"></div>
+		  <div class="title-grey-bold text-center" >Programa de indicações</div>
+		  <div style="height: 50px;"></div>
+		  <div class="row d-flex">
+		    <div align="center" class="col p-2">
+		      <div class="box-1" style="text-align: right;">
+		      	<div class="title-right-top m-2">
+		      		<img src="img/collab.svg" style="width: 85%;height: 85%">
+		      	</div>
+		      	<div>
+		      		
+		      	</div>
+		      </div>
+		      
+		    </div>
+
+		    <div align="left" class="col p-2" >
+		      <div class="programa-box" style="width: 75%;">
+		      	 <div class="title-big purple-text" style="margin-bottom: 40px">Indique amigos e ganhe parte de suas transações</div>
+
+		     	 <div class="title-thin-small purple-text" style="color: black !important">Cada vez que um amigo indicado por você faz uma compra, você ganha uma porcentagem da transação. Sim, isso é possível!</div>
+		     	 <div class="title-thin-small purple-text mt-5 blue-text" style="font-size: 18px;font-family: unset">Quero saber mais sobre isso</div>
+		      </div>
+		    </div>
+		    
+		    
+		    
+		  </div>
+		  <div style="height: 100px;"></div>
+		</div>
+		<!-- TELA 6 programa de indicações -->
+
+		<!--  TELA 7 token -->
+		<div class="container-fluid tela7" >
+
+		  <div style="height: 100px;"></div>
+		  <div class="row d-flex ">
+		    
+		    <div align="center" class="col p-2 position-relative">
+		      <div class="box-1 position-absolute token-bg" style="width: 70vw;height: 86vh;top:-55px;left:-10px" >
+		      	
+		      </div>
+		      
+
+		    </div>
+		    
+		    <div align="center" class="col purple1" style="height: 75vh">
+		      <div class="box-1" style="width: 75%">
+		      	
+		     		<div style="    width: 80%;">
+		     				<div class="title-cashback white-text" align="left" style="margin-top: 50px;margin-bottom: 40px;">Token</div>
+					      	<div class="title-ganhegastando white-text" style="margin-bottom: 40px;">O token que você vai usar no dia a dia</div>
+					      	<div class="beneficio d-flex flex-row mt-2">
+					      	 	<div class="p-2 mr-2">
+					      	 		<img src="img/right.svg"/>
+					      	 	</div>
+					      	 	<div class="d-flex flex-column ">
+					      	 		<div class="white-text">100% segura</div>
+					      	 		<div class="white-text">Os processos são criptografados e seguem protocolos rígidos de autenticidade e segurança.</div>
+					      	 	</div>
+					      	 </div>
+
+					      	 <div class="beneficio d-flex flex-row mt-2">
+					      	 	<div class="p-2 mr-2">
+					      	 		<img src="img/right.svg"/>
+					      	 	</div>
+					      	 	<div class="d-flex flex-column">
+					      	 		<div class="white-text">Fácil de usar</div>
+					      	 		<div class="white-text">Baixe o aplicativo, crie sua carteira digital e vá as compras nas suas lojas físicas e virtuais preferidas. Simples assim!</div>
+					      	 	</div>
+					      	 </div>
+					     
+
+					     	 <div class="beneficio d-flex flex-row mt-2">
+					      	 	<div class="p-2 mr-2">
+					      	 		<img src="img/right.svg"/>
+					      	 	</div>
+					      	 	<div class="d-flex flex-column">
+					      	 		<div class="white-text">Agilidade nas transações</div>
+					      	 		<div class="white-text">Nossa compensação é super rápida e prática, inclusive feriados e finais de semana.</div>
+					      	 	</div>
+					      	 </div>
+
+		     		</div>
+		     		
+		      </div>
+		    
+		  </div>
+		</div>
+	</div>
+		<!-- TELA 7 token -->
+
+
+	<!-- tela 8 liberdade -->
+
+		<div class="container-fluid tela8">
+		  <div style="height: 250px;"></div>
+		  <div class="row d-flex bg-gray-soft" style="height: 55vh">
+		    
+		    <div align="right" class="col p-2" >
+		      <div class="box-1 text-right" style="width: 60%;">
+		      	 <div class="title-big purple-text" style="margin-bottom: 40px;margin-top: 50px;">A liberdade que você sempre sonhou, agora em suas mãos</div>
+		     	 <div class="title-thin-small brown-text" style="color:#979090;font-family: unset;font-size: 20px;margin-bottom: 40px;">Resolva tudo digitalmente, sem sair de casa, utilizando seu smartphone, tablet ou computador. Baixe agora!</div>
+		     	 <div class="d-flex flex-row justify-content-around">
+		     	 	<a href="#"><img  src="img/apple store.png" width="200" /></a>
+		     	 	<a href="#"><img  src="img/google play.png" width="200" /></a>
+		     	 </div>
+		      </div>
+		    </div>
+		    
+		    <div align="center" class="col p-2 position-relative">
+		      <img class="position-absolute" src="img/iPhone-areus.png" width="380" height="550" style="top:-80px;left: 0" />
+		      
+		    </div>
+		    
+		  </div>
+		  <div style="height: 100px;"></div>
+		</div>
+		<!-- tela 8 liberdade -->
+
+		<!-- tela 9 cadastra-se -->
+
+		
+
+
+		<div class="container-fluid darkest-purple tela9">
+		  <div style="height: 100px;"></div>
+		  <div class="row d-flex justify-content-center">
+		    	<div class="w-25 white-text title-big text-center" style="font-size: 25px">
+		    		
+		    		Cadastre-se na lista de espera e seja um dos primeiros a participar
+		    	</div>
+		    	
+		    
+		  </div>
+		  <div align="center" class="mt-5">
+		  	<div style="width: 20%">
+		  		<input type="text" class="darkest-purple boder-none m-2 input-form" placeholder="Nome*" name="nome_cad" style="border: 1px solid white; background:transparent;" />
+			  	
+				<input type="text" class="darkest-purple boder-none m-2 input-form" placeholder="Email*" name="email_cad"  style="border: 1px solid white; background:transparent;"  />
+
+		  	</div>
+		  	<div style="margin-top: 40px;">
+		  		<button class="btn-tranparent btn-cad" style="    font-size: 20px;width: 150px;">Cadastre-se</button>
+		  		<div class=" formerrorcad formsucessoenviocad" align="left" style="color:white;height: 100px;margin-left: 10px;
+    text-align: center;">
+					
+
+						</div>
+		  	</div> 
+		  </div>
+		  <div style="height: 100px;"></div>
+		  
+
+		</div>
+
+		<!-- tela 9 cadastra-se -->
+
+
+
+		<!-- tela 10 form -->
+
+		<div class="container-fluid purple2 d-flex flex-row pt-5">
+		  
+		  <div class="row d-flex flex-column justify-content-center align-items-center" style="margin-left: 10vw;">
+		    	<div class="w-75 white-text fs-30 white-text  text-left">
+		    		Quer saber mais?
+		    	</div>
+		    	<div class="w-75 white-text fs-30 white-text  text-left" style="margin-bottom: 40px;">
+		    		Entre em contato conosco!
+		    	</div>
+		    	<div class="w-75 white-text text-left">
+			  		<input type="text" class="darkest-purple boder-none m-2 input-form" placeholder="Nome*" name="nome" style="border: 1px solid white; background:transparent;" />
+			  		
+			  		<input type="text" class="darkest-purple boder-none m-2 input-form" placeholder="Email*" name="email"  style="border: 1px solid white; background:transparent;"  />
+			  		
+			  		<textarea class="darkest-purple boder-none m-2 input-form" placeholder="Mensagem*" name="msg"  style="border: 1px solid white; background:transparent;height: 100px" ></textarea>
+			  		
+			  	</div>
+			  	<div class="w-75" align="left">
+				  		<button class="btn-tranparent fs-20 btn-contact" style="background-color: transparent;color: white;width: 120px;margin-left: 10px;border: 1px solid white">Enviar</button>
+				  		<div class="formmsgerror formemailerror formnomeerror formsucessoenvio" align="left" style="color:white;height: 100px;margin-left: 10px;">
+					
+
+						</div>
+				  	</div>
+				
+		  </div>
+		  <div style="width: 50%">
+		  	<div align="center" class="d-flex flex-column ">
+			  	<div class="title-small mb-2 ff-20" style="font-family: unset;font-weight: unset;">
+			  		Siga-nos nas redes sociais
+			  	</div>
+			  	<!-- 
+
+			  	<div>
+			  		<button class="btn-tranparent fs-20" style="width: 200px;background-color: transparent;color: white;border: 1px solid white;">Cadastre-se</button>
+			  	</div> -->
+
+
+			  	
+			  </div>
+		  </div>
+		  
+		  
+
+		</div>
+		<!-- tela 10 form -->
+		
+		<div class="purple2 text-white  fs-20" style="height: 50px;line-height: 5;" align="center">
+		  	Areus | Porto Alegre | Rio Grande do Sul | areus@areus.com.br
+		</div>
+		<div class="purple2 text-white fw-bold" style="height: 80px;line-height: 5" align="center">
+		  	Areus 2018 Copyright ©. All rights reserved.
+		</div>
+	</body>
+
+</html>
