@@ -92,7 +92,7 @@
 /*tela3 beneficio*/
 
 .beneficio-box{
-	width: 70%;				
+	width: 100%;				
 }
 .beneficios-tipos{
 	border-radius: 50px;
@@ -105,7 +105,7 @@
 }
 
 .beneficio{
-	height: 120px;
+	height: 190px;
 }
 .beneficio img{
 	width: 60px;
